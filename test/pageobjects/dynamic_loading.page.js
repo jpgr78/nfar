@@ -98,6 +98,15 @@ async golink(testing){
 
 }
 
+async hastext(test){
+  it(test.text, async () => {
+      this.open(test.path)
+      await expect(test.element).toHaveText(test.textinside)
+    
+   });
+
+}
+
   async login (path,inputus,inputpass,but,username, password,text,elementexpected) {
     it(text, async () => {
       this.open(path)
